@@ -52,13 +52,13 @@ The ARIMA and Prophet models relied solely on how the Sharpe Ratio changed over 
 [LSTM Neural Network Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/5.%20LSTM/LSTM%20Final.ipynb)
 Moving on to Neural Networks, via an LSTM model with a Dense layer yielded lower error, but similar results of predicting near the mean for each stock and not being able to differentiate between the Sharpe Ratio on a daily basis.
 
-The LSTM model did have access to more data, but it was not clear to me why it wasn't able to make predictions further from the mean.  I would need to do more learning and research to better understand why it prioritized decreasing error in this manner.
+The LSTM model did have access to more data, 29 features in total after feature engineering, which was the same for the Random Forest Regressor Models, but it was not clear to me why it wasn't able to make predictions further from the mean.  I would need to do more learning and research to better understand why it prioritized decreasing error in this manner.
 
 ## Random Forest Regressor
 [LSTM Neural Network Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/4.%20Random_Forest_Regressor/Random%20Forest%20Regressor%20Final.ipynb)
 Lastly, Random Forest Regressor Models performed better at differentiating between stocks on a daily basis, though they did not perform much better in terms of Root Mean Squared Error for most stocks.  One of the challenges with Random Forest Regressors is properly training them on a data frame that allows them to interpret date, and this was accomplished by converting the date to a float and including it in the training set. 
 
-In addition to including the date in the training set, I calculated a Sharpe Ratio using the close of the prior and current day, which would be part of the test set, or prediction set, on Kaggle.  The calculation was inspired by an article on [The Sharpe Ratio](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm) by Stanford's William F. Sharpe himself.  This feature addition contributed 26% of the feature importance, of 29 features in total, with the second most important feature being the 2 Day Spread at 7%.
+In addition to including the date in the training set, I calculated a Sharpe Ratio using the close of the prior and current day, which would be part of the test set, or prediction set, on Kaggle.  The calculation was inspired by an article on [The Sharpe Ratio](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm) by Stanford's William F. Sharpe, himself.  This feature addition contributed 26% of the feature importance, of 29 features in total, with the second most important feature being the 2 Day Spread at 7%.
    
 Two methods of modelling were used in the Random Forest Regressors, and the second type of modelling - creating a separate model and prediction for each of 2000 stocks did much better at differentiating between stocks than the single model, trained on all of the stocks at once.
 
