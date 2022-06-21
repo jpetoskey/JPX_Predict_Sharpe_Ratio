@@ -69,13 +69,13 @@ ARIMA models scored below 0 in most cases, with my final test scoring a -1.43 on
 I did not complete a final submission to score for a Prophet model as it was performing very similarly to ARIMA and I wanted to move on to modelling with neural networks.
 
 ### Visual 1
-[ARIMA Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/ARIMA_9663.png)
+![ARIMA Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/ARIMA_9663.png)
 
 ## LSTM Neural Network with Dense Layer
 The LSTM model was not able to produce results for every stock even when implemented on Google Cloud with 4 CPUs, 16 GB of RAM and 1 GPU.  However, it seems likely that the model would have scored similarly to the ARIMA, as it was predicting target values very close to the mean.
 
 ### Visual 2
-[LSTM with Dense Layer for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/LSTM_9663.png)
+![LSTM with Dense Layer for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/LSTM_9663.png)
 
 ## Random Forest Regressors
 The Random Forest Regressors were more successful at differentiating between stocks' Sharpe Ratio and this resulted in much higher Kaggle scores.  The predictions ranged much farther from the mean Sharpe Ratio value and were able to attain a similar or better RMSE compared to the ARIMA and LSTM models.
@@ -83,22 +83,22 @@ The Random Forest Regressors were more successful at differentiating between sto
 In the visuals below, note how the individual random forest model is able to reduce the error on its predictions quite dramatically when stock 9663 experiences volatility.  The Single Random Forest Model is trained on all stocks at once and the individual random forest model is trained on each stock independently.
 
 ### Visual 3
-[Single Random Forest Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/RFR_1Model_9663.png)
+![Single Random Forest Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/RFR_1Model_9663.png)
 
 ### Visual 4
-[Individual Random Forest Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/RFR_IndivModel_9663.png)
+![Individual Random Forest Model for Stock 9663](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/RFR_IndivModel_9663.png)
 
 ## Comparing RMSE between Models for 5 Stocks
 Note how a given model type does not always have the best RMSE, but the Individually Modelled Random Forest Regressor does perform the best overall.  And, it performs much better on stocks that exhibit greater volatility, such as stock 9663.
 
 ### Visual 5
-[Error by Model Type](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/Error%20by%20Model%20Type.png)
+![Error by Model Type](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/Error%20by%20Model%20Type.png)
 
 ## Top Kaggle Score by Model Type
 The top Kaggle Score by a wide margin was attained by the Individually Modelled Random Forest Regressor.  This seems due to its ability to make predictions that differentiate between stocks' Sharpe Ratio on a daily basis.
 
 ### Visual 6 
-[Kaggle Scores](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/Kaggle%20Score%20by%20Model%20Type.png)
+![Kaggle Scores](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/images/Kaggle%20Score%20by%20Model%20Type.png)
 
 
 # Conclusion
