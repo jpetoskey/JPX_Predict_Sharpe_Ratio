@@ -28,13 +28,13 @@ Predictions need to be made based on 2000 stocks, however data from additional s
 
 ## The data is broken down into 4 main categories: Prices, Financials, Stock List, Options:
 
-Prices data includes daily trading values such as Open, Close, Volume, with some additional attributes, such as Expected Dividend and Adjustment Factor.
+  * Prices data includes daily trading values such as Open, Close, Volume, with some additional attributes, such as Expected Dividend and Adjustment Factor.
 
-Financials data includes income statement information and is usually posted quarterly for each security.
+  * Financials data includes income statement information and is usually posted quarterly for each security.
 
-Stock List data contains categorical information, such as market sector, and some numerical information, such as market capitalization.
+  * Stock List data contains categorical information, such as market sector, and some numerical information, such as market capitalization.
 
-Options data includes options trading information and has a large amount of trading-focused data.
+  * Options data includes options trading information and has a large amount of trading-focused data.
 
 
 # Methods
