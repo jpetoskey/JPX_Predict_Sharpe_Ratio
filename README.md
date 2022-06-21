@@ -104,10 +104,12 @@ The top Kaggle Score by a wide margin was attained by the Individually Modelled 
 # Conclusion
 
 ## Generate Positive Returns
-It seems likely that the Individually Modelled Random Forest Regressor will generate returns on a daily basis when implemented at a large scale, which involves ranking 2000 stocks, buying the top 200, and shorting the bottom 200 and repeating this process on a daily basis.  It seems less likely that this approach would work for individual or retail investors, as trading 400 stocks on a daily basis is not something I know how to do, but it could reap large returns for institutional investors, and most relevant to this competition, JPX Stock Exchange.
+It seems likely that the Individually Modelled Random Forest Regressor will generate returns on a daily basis when implemented at a large scale, which involves ranking 2000 stocks, buying the top 200, and shorting the bottom 200 and repeating this process on a daily basis.  
+
+This approach could work for individual or retail investors, but it is more likely to reap returns for institutional investors with large investment portfolios.  By increasing the number of trades at an institutional level, JPX Stock Exchange could dramatically increase revenue.
 
 
-# Future Work Highly Recommended
+# Future Work Recommended
 
 ## Add Options Data
 I was able to add financial and stock list data into the training data frame, and the next step is adding Options data.  This trading information available in the options data set may give the Random Forest and Neural Network models more insight into what is going to happen in the market.
