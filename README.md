@@ -117,6 +117,9 @@ I was able to add financial and stock list data into the training data frame, an
 ## Additional Regressor Model Types
 Random Forest has done the best job predicting the Sharpe Ratio so far, but I am eager to try Naive Bayes as this model has done a better job making sense of stock market information in [other projects](https://datascience2.medium.com/comparing-every-machine-learning-algorithm-to-predict-the-stock-market-f2ddc06a0d91). 
 
+## Investigate Neural Networks Further
+Try to determine why the neural network is predicting the mean and find ways to improve its predictive capacity.  In addition, access more computing power so a final model can be scored.
+
 # For More Information
 
    Please review my final analysis in my [Model Comparison Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/Model%20Comparison.ipynb) or my [presentation]().
