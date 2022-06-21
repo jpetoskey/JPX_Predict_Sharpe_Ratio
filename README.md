@@ -4,7 +4,7 @@
 
    * Data from: [Kaggle Competition: JPX Tokyo Stock Exchange Prediction](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data)  
 
-   * See the [Overview for the JPX Tokyo Stock Exchange here: ]([Kaggle Competition: JPX Tokyo Stock Exchange Prediction](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data))
+   * See the [Overview for the JPX Tokyo Stock Exchange here]([Kaggle Competition: JPX Tokyo Stock Exchange Prediction](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data))
 
 This is a competition that relies on time-series modelling to produce predictions of the Sharpe Ratio each day over 56 days for 2000 stocks.  
 
