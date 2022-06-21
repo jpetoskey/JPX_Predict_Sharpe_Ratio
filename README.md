@@ -2,14 +2,14 @@
 
 ## Overview
 
-   * Data from: [Kaggle Competition: JPX Tokyo Stock Exchange Prediction](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data)  
-
-   * See the [Overview for the JPX Tokyo Stock Exchange here: ](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data)
-
 This is a time-series modelling competition to produce predictions for the Sharpe Ratio for 2000 stocks once each day for 56 days.  
 
 The contestant's one-day score is computed two days following the submission of the Sharpe Ratio and is based on the return of the user's top 200 and bottom 200 stocks.  The top 200 stocks are bought and the bottom 200 are shorted on the close of the business day after the Sharpe Ratio is predicted and sold at the close of the following trading day.  The mean of the 56 single day scores is calculated, then divided by the standard deviation of those scores for the final competition score.
 
+   * Data from: [Kaggle Competition: JPX Tokyo Stock Exchange Prediction](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data)  
+
+   * [Overview for the JPX Tokyo Stock Exchange on Kaggle](https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data)
+  
 
 # Business Opportunity
 
