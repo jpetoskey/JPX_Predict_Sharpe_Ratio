@@ -41,8 +41,7 @@ Predictions need to be made based on 2000 stocks, however data from additional s
 
 In terms of modeling, Time-Series Models such as ARIMA and Prophet were implemented initially, then a LSTM Neural Network with a Dense Layer, then a Random Forest Regressor.  
    
-## ARIMA and Prophet - [ARIMA Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/2.%20ARIMA/ARIMA%20Final.ipynb)
-, [Prophet Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/3.%20Prophet/FB%20Prophet.ipynb)
+## ARIMA and Prophet - [ARIMA Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/2.%20ARIMA/ARIMA%20Final.ipynb), [Prophet Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/3.%20Prophet/FB%20Prophet.ipynb)
 Time series models, such as ARIMA and Prophet largely predicted near the mean as the target variable passes the stationarity test for every stock tested.  Predicting near the securities' mean did not yield a high score on kaggle as it was not able to accurately differentiate between stocks' Sharpe Ratio on a daily basis.
        
 The ARIMA and Prophet models relied solely on how the Sharpe Ratio changed over time and did not have access to the variety of data available to regressors or neural networks.  Considering there were no trends or seasonality to glean from the target variable, these models did not have much valuable information to decrease error or improve differentiation between stocks. I did attempt to add a regressor to the prophet models, but was unable to make the add regressor function work and moved on to trying a neural network.
