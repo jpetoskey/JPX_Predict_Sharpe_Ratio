@@ -41,21 +41,18 @@ Predictions need to be made based on 2000 stocks, however data from additional s
 
 In terms of modeling, Time-Series Models such as ARIMA and Prophet were implemented initially, then a LSTM Neural Network with a Dense Layer, then a Random Forest Regressor.  
    
-## ARIMA and Prophet
-[ARIMA Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/2.%20ARIMA/ARIMA%20Final.ipynb)
-[Prophet Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/3.%20Prophet/FB%20Prophet.ipynb)
+## ARIMA and Prophet - [ARIMA Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/2.%20ARIMA/ARIMA%20Final.ipynb)
+, [Prophet Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/3.%20Prophet/FB%20Prophet.ipynb)
 Time series models, such as ARIMA and Prophet largely predicted near the mean as the target variable passes the stationarity test for every stock tested.  Predicting near the securities' mean did not yield a high score on kaggle as it was not able to accurately differentiate between stocks' Sharpe Ratio on a daily basis.
        
 The ARIMA and Prophet models relied solely on how the Sharpe Ratio changed over time and did not have access to the variety of data available to regressors or neural networks.  Considering there were no trends or seasonality to glean from the target variable, these models did not have much valuable information to decrease error or improve differentiation between stocks. I did attempt to add a regressor to the prophet models, but was unable to make the add regressor function work and moved on to trying a neural network.
   
-## LSTM Neural Network
-[LSTM Neural Network Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/5.%20LSTM/LSTM%20Final.ipynb)
+## LSTM Neural Network - [LSTM Neural Network Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/5.%20LSTM/LSTM%20Final.ipynb)
 Moving on to Neural Networks, via an LSTM model with a Dense layer yielded lower error, but similar results of predicting near the mean for each stock and not being able to differentiate between the Sharpe Ratio on a daily basis.
 
 The LSTM model did have access to more data, 29 features in total after feature engineering, which was the same for the Random Forest Regressor Models, but it was not clear to me why it wasn't able to make predictions further from the mean.  I would need to do more learning and research to better understand why it prioritized decreasing error in this manner.
 
-## Random Forest Regressor
-[LSTM Neural Network Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/4.%20Random_Forest_Regressor/Random%20Forest%20Regressor%20Final.ipynb)
+## Random Forest Regressor - [Random Forest Regressor Final Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/code/4.%20Random_Forest_Regressor/Random%20Forest%20Regressor%20Final.ipynb)
 Lastly, Random Forest Regressor Models performed better at differentiating between stocks on a daily basis, though they did not perform much better in terms of Root Mean Squared Error for most stocks.  One of the challenges with Random Forest Regressors is properly training them on a data frame that allows them to interpret date, and this was accomplished by converting the date to a float and including it in the training set. 
 
 In addition to including the date in the training set, I calculated a Sharpe Ratio using the close of the prior and current day, which would be part of the test set, or prediction set, on Kaggle.  The calculation was inspired by an article on [The Sharpe Ratio](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm) by Stanford's William F. Sharpe, himself.  This feature addition contributed 26% of the feature importance, of 29 features in total, with the second most important feature being the 2 Day Spread at 7%.
