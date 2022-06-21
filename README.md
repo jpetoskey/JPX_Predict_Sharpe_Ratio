@@ -59,7 +59,7 @@ In addition to including the date in the training set, I calculated a Sharpe Rat
 Two methods of modelling were used in the Random Forest Regressors, and the second type of modelling - creating a separate model and prediction for each of 2000 stocks did much better at differentiating between stocks than the single model, trained on all of the stocks at once.
 
 
-# Results
+# Results - [Model Comparison Notebook](https://github.com/jpetoskey/JPX_Predict_Sharpe_Ratio/blob/main/Model%20Comparison.ipynb)
 
 All models types were able to achieve a relatively similar average Root Mean Squared Error of somewhere around 0.020, but each model type performed quite differently in terms of scoring, and it is apparent why this occurred when observing plots for a given stock.
 
