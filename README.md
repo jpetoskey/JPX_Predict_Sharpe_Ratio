@@ -103,13 +103,16 @@ The top Kaggle Score by a wide margin was attained by the Individually Modelled 
 
 # Conclusion
 
-## Generate Positive Returns
+## Models Likely Generate Positive Returns
 
   * Institutional Investors and Retail Investors, in some cases, will be able to profit from daily investing at a large scale.
-    * Important to understand that a large portfolio reduces risk.  
+    * Important to understand that a large portfolio reduces risk. 
+     
   * Increased trading on JPX Stock Exchange likely 
     * Random Forest Regressors, among other models on Kaggle are producing positive returns.
+    
   * Increasing revenue likely for JPX Stock Exchange due to Kaggle competition.
+  
   * I recommend creating relationships between data scientists and machine learning professionals in the competition and institutional investors so the models can be tested further and implemented at scale.
 
 
